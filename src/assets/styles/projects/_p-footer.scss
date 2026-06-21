@@ -35,29 +35,15 @@
 }
 
 .p-footer__logo-link {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
+  display: inline-flex;
+  color: oklch(from var(--color-white) l c h / 85%);
   text-decoration: none;
 }
 
-.p-footer__logo-en {
+.p-footer__logo-svg {
   display: block;
-  font-family: var(--en-font-family);
-  font-size: 9px;
-  font-weight: var(--fw-light);
-  letter-spacing: 0.2em;
-  color: oklch(from var(--color-white) l c h / 60%);
-  text-transform: uppercase;
-}
-
-.p-footer__logo-main {
-  display: block;
-  font-family: var(--en-font-family);
-  font-size: 24px;
-  font-weight: var(--fw-light);
-  letter-spacing: 0.12em;
-  color: var(--color-white);
+  width: auto;
+  height: 36px;
 }
 
 // Info

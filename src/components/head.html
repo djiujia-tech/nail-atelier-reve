@@ -17,6 +17,7 @@
     onload='this.media="all"'
   />
   <title>{{ page.title }}</title>
+  {{#if page.canonical}}<link rel="canonical" href="{{ page.canonical }}" />{{/if}}
   <meta name="description" content="{{ page.description }}" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="{{ page.title }}" />

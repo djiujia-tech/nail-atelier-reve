@@ -1,6 +1,31 @@
 <!doctype html>
 <html lang="ja">
   {{> head }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Nail Atelier RÊVE",
+    "alternateName": "ネイルアトリエ レーヴ",
+    "url": "https://nail-atelier-reve.vercel.app/",
+    "logo": "https://nail-atelier-reve.vercel.app/assets/images/logo-reve.svg",
+    "image": "https://nail-atelier-reve.vercel.app/assets/images/ogp.jpg",
+    "description": "Nail Atelier RÊVE（レーヴ）は、上質なジェルネイルとネイルチップ販売を行うネイルアトリエです。",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "中央1-1-1",
+      "addressLocality": "○○市",
+      "addressRegion": "○○県",
+      "postalCode": "000-0000",
+      "addressCountry": "JP"
+    },
+    "telephone": "000-0000-0000",
+    "openingHours": ["Tu-Tu closed", "We-Mo 10:00-19:00"],
+    "priceRange": "¥¥¥",
+    "currenciesAccepted": "JPY",
+    "paymentAccepted": "Cash, Credit Card"
+  }
+  </script>
   <body>
     {{> p-intro}}
     {{> p-header}}
