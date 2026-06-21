@@ -52,37 +52,19 @@
 
 .p-header__logo-link {
   display: flex;
-  flex-direction: column;
-  line-height: 1;
+  align-items: center;
   text-decoration: none;
-}
-
-.p-header__logo-en {
-  display: block;
-  font-family: var(--en-font-family);
-  font-size: 9px;
-  font-weight: var(--fw-light);
-  letter-spacing: 0.2em;
-  color: var(--_hdr-fg);
-  text-transform: uppercase;
-  transition: color 0.4s ease;
-
-  @include mq("md") {
-    font-size: 10px;
-  }
-}
-
-.p-header__logo-main {
-  display: block;
-  font-family: var(--en-font-family);
-  font-size: 22px;
-  font-weight: var(--fw-light);
-  letter-spacing: 0.12em;
   color: var(--_hdr-fg);
   transition: color 0.4s ease;
+}
+
+.p-header__logo-img {
+  display: block;
+  width: auto;
+  height: 32px;
 
   @include mq("md") {
-    font-size: 26px;
+    height: 40px;
   }
 }
 

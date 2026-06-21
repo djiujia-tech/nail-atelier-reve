@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 100" role="img" aria-label="RÊVE emblem">
+  <ellipse cx="36" cy="52" rx="30" ry="42" fill="none" stroke="#c9a96e" stroke-width="1.2"/>
+  <ellipse cx="36" cy="52" rx="24" ry="35" fill="none" stroke="#c9a96e" stroke-width="0.45" opacity="0.5"/>
+  <line x1="9" y1="30" x2="63" y2="30" stroke="#c9a96e" stroke-width="0.8" opacity="0.6"/>
+  <text x="36" y="72" font-family="Georgia,'Times New Roman',serif" font-size="34" font-weight="400" text-anchor="middle" fill="#c9a96e">R</text>
+</svg>
