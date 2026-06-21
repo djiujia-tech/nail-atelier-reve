@@ -1,0 +1,224 @@
+// ==============================
+// p-cart-modal
+// ==============================
+
+.p-cart-modal {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-index-header) + 10);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: none;
+
+  &[aria-hidden="false"] {
+    pointer-events: auto;
+
+    .p-cart-modal__overlay {
+      opacity: 1;
+    }
+
+    .p-cart-modal__content {
+      transform: translateX(0);
+    }
+  }
+}
+
+// オーバーレイ
+.p-cart-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: oklch(from #000 l c h / 40%);
+  opacity: 0;
+  transition: opacity var(--duration);
+  cursor: pointer;
+}
+
+// モーダル本体
+.p-cart-modal__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: min(420px, 100%);
+  height: 100svh;
+  padding: 24px;
+  overflow-y: auto;
+  background-color: var(--color-white);
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+// 閉じるボタン
+.p-cart-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--color-text);
+  cursor: pointer;
+  background: none;
+  border: 1px solid var(--color-border);
+  transition:
+    background-color var(--duration),
+    color var(--duration);
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-text);
+    }
+  }
+}
+
+.p-cart-modal__title {
+  margin-bottom: 24px;
+  padding-right: 48px;
+  font-family: var(--en-font-family);
+  font-size: 20px;
+  font-weight: var(--fw-light);
+  letter-spacing: 0.15em;
+  color: var(--color-text);
+}
+
+// カートリスト
+.p-cart-modal__list {
+  flex: 1;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow-y: auto;
+}
+
+.p-cart-modal__empty {
+  padding-block: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: oklch(from var(--color-text) l c h / 50%);
+}
+
+// カートアイテム
+.p-cart-modal__item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 12px;
+  align-items: start;
+  padding-block: 16px;
+  border-bottom: 1px solid var(--color-border);
+
+  img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+}
+
+.p-cart-modal__item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.p-cart-modal__item-name {
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  color: var(--color-text);
+}
+
+.p-cart-modal__item-price {
+  font-family: var(--en-font-family);
+  font-size: 15px;
+  font-weight: var(--fw-light);
+  color: var(--color-gold);
+}
+
+.p-cart-modal__item-qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+
+  span {
+    min-width: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.p-cart-modal__qty-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  background: none;
+  border: 1px solid var(--color-border);
+  transition: background-color var(--duration);
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--color-gray);
+    }
+  }
+}
+
+.p-cart-modal__item-remove {
+  padding: 0;
+  font-size: 16px;
+  line-height: 1;
+  color: oklch(from var(--color-text) l c h / 40%);
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color var(--duration);
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-text);
+    }
+  }
+}
+
+// フッター
+.p-cart-modal__footer {
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.p-cart-modal__total {
+  margin-bottom: 20px;
+  font-size: 15px;
+  text-align: right;
+  color: var(--color-text);
+
+  strong {
+    font-family: var(--en-font-family);
+    font-size: 22px;
+    font-weight: var(--fw-light);
+    color: var(--color-gold);
+    margin-left: 8px;
+  }
+}
+
+.p-cart-modal__footer .c-btn {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.p-cart-modal__note {
+  font-size: 11px;
+  line-height: 1.7;
+  text-align: center;
+  color: oklch(from var(--color-text) l c h / 45%);
+}

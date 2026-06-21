@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+  {{> head }}
+  <body>
+    {{> p-intro}}
+    {{> p-header}}
+    <main>
+      <div class="p-page-hero">
+        <p class="p-page-hero__en">GALLERY</p>
+        <h1 class="p-page-hero__title">デザインギャラリー</h1>
+      </div>
+
+      <section class="p-gallery l-section">
+        <div class="l-inner">
+          <div class="p-gallery__filter">
+            <button class="p-gallery__filter-btn is-active" data-filter="all">ALL</button>
+            <button class="p-gallery__filter-btn" data-filter="gel">ジェル</button>
+            <button class="p-gallery__filter-btn" data-filter="art">アート</button>
+            <button class="p-gallery__filter-btn" data-filter="french">フレンチ</button>
+            <button class="p-gallery__filter-btn" data-filter="foot">フット</button>
+          </div>
+
+          <ul class="p-gallery__list">
+            <li class="p-gallery__item" data-category="gel">
+              <img src="/assets/images/image_gallery_01.webp" width="400" height="400" alt="ジェルネイル" loading="lazy" />
+              <p class="p-gallery__tag">ジェル</p>
+            </li>
+            <li class="p-gallery__item" data-category="art">
+              <img src="/assets/images/image_gallery_02.webp" width="400" height="400" alt="アートネイル" loading="lazy" />
+              <p class="p-gallery__tag">アート</p>
+            </li>
+            <li class="p-gallery__item" data-category="french">
+              <img src="/assets/images/image_gallery_03.webp" width="400" height="400" alt="フレンチネイル" loading="lazy" />
+              <p class="p-gallery__tag">フレンチ</p>
+            </li>
+            <li class="p-gallery__item" data-category="gel">
+              <img src="/assets/images/image_gallery_04.webp" width="400" height="400" alt="ジェルネイル" loading="lazy" />
+              <p class="p-gallery__tag">ジェル</p>
+            </li>
+            <li class="p-gallery__item" data-category="art">
+              <img src="/assets/images/image_gallery_05.webp" width="400" height="400" alt="アートネイル" loading="lazy" />
+              <p class="p-gallery__tag">アート</p>
+            </li>
+            <li class="p-gallery__item" data-category="foot">
+              <img src="/assets/images/image_gallery_06.webp" width="400" height="400" alt="フットネイル" loading="lazy" />
+              <p class="p-gallery__tag">フット</p>
+            </li>
+            <li class="p-gallery__item" data-category="french">
+              <img src="/assets/images/image_gallery_07.webp" width="400" height="400" alt="フレンチネイル" loading="lazy" />
+              <p class="p-gallery__tag">フレンチ</p>
+            </li>
+            <li class="p-gallery__item" data-category="art">
+              <img src="/assets/images/image_gallery_08.webp" width="400" height="400" alt="アートネイル" loading="lazy" />
+              <p class="p-gallery__tag">アート</p>
+            </li>
+            <li class="p-gallery__item" data-category="gel">
+              <img src="/assets/images/image_gallery_09.webp" width="400" height="400" alt="ジェルネイル" loading="lazy" />
+              <p class="p-gallery__tag">ジェル</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    {{> p-footer}}
+    <script src="/assets/js/gallery.js" type="module"></script>
+  </body>
+</html>

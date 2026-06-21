@@ -1,0 +1,74 @@
+// ==============================
+// c-btn
+// ==============================
+
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  padding: 14px 32px;
+  font-family: var(--en-font-family);
+  font-size: 13px;
+  font-weight: var(--fw-light);
+  letter-spacing: 0.2em;
+  color: var(--color-white);
+  text-decoration: none;
+  cursor: pointer;
+  background-color: var(--color-text);
+  border: 1px solid var(--color-text);
+  transition:
+    background-color var(--duration),
+    color var(--duration),
+    border-color var(--duration);
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-text);
+      background-color: transparent;
+    }
+  }
+}
+
+// アウトラインバリアント（暗背景以外で使用）
+.c-btn--outline {
+  color: var(--color-text);
+  background-color: transparent;
+  border-color: var(--color-text);
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-text);
+    }
+  }
+}
+
+// ゴールドバリアント
+.c-btn--gold {
+  color: var(--color-white);
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-gold);
+      background-color: transparent;
+      border-color: var(--color-gold);
+    }
+  }
+}
+
+// ライト（暗背景上のアウトライン）
+.c-btn--light {
+  color: var(--color-white);
+  background-color: transparent;
+  border-color: var(--color-white);
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-text);
+      background-color: var(--color-white);
+    }
+  }
+}

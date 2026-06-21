@@ -1,0 +1,91 @@
+// ==============================
+// p-intro（カーテンイントロ）
+// ==============================
+
+.p-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  pointer-events: none;
+
+  &.is-done {
+    display: none;
+  }
+}
+
+// 左右パネル
+.p-intro__panel {
+  flex: 1;
+  background-color: var(--color-primary);
+  transition: transform 0.9s cubic-bezier(0.76, 0, 0.24, 1);
+  transition-delay: 0.8s;
+}
+
+.p-intro__panel--left {
+  transform: translateX(0);
+
+  .p-intro.is-open & {
+    transform: translateX(-100%);
+  }
+}
+
+.p-intro__panel--right {
+  transform: translateX(0);
+
+  .p-intro.is-open & {
+    transform: translateX(100%);
+  }
+}
+
+// ロゴ（中央）
+.p-intro__logo {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  transition-delay: 0.6s;
+
+  .p-intro.is-open & {
+    opacity: 0;
+  }
+}
+
+.p-intro__logo-sub {
+  display: block;
+  font-family: var(--en-font-family);
+  font-size: 11px;
+  font-weight: var(--fw-light);
+  letter-spacing: 0.35em;
+  color: var(--color-gold-light);
+  text-transform: uppercase;
+  // フェードイン
+  opacity: 0;
+  transform: translateY(8px);
+  animation: intro-fade-in 0.6s ease 0.2s forwards;
+}
+
+.p-intro__logo-main {
+  display: block;
+  font-family: var(--en-font-family);
+  font-size: 48px;
+  font-weight: var(--fw-light);
+  letter-spacing: 0.15em;
+  color: var(--color-white);
+  opacity: 0;
+  transform: translateY(8px);
+  animation: intro-fade-in 0.6s ease 0.35s forwards;
+}
+
+@keyframes intro-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

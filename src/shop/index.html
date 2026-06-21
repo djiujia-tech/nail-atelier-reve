@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+  {{> head }}
+  <body>
+    {{> p-intro}}
+    {{> p-header}}
+    <main>
+      <div class="p-page-hero">
+        <p class="p-page-hero__en">SHOP</p>
+        <h1 class="p-page-hero__title">オンラインショップ</h1>
+      </div>
+
+      <!-- カートバー -->
+      <div class="p-shop-cart-bar js-cart-bar">
+        <div class="l-inner">
+          <div class="p-shop-cart-bar__inner">
+            <p class="p-shop-cart-bar__count">カート：<span class="js-cart-count">0</span>点</p>
+            <p class="p-shop-cart-bar__total">合計：<span class="js-cart-total">¥0</span></p>
+            <button class="c-btn c-btn--gold p-shop-cart-bar__btn js-cart-open" type="button">
+              カートを見る
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <section class="p-shop l-section">
+        <div class="l-inner">
+          <p class="p-shop__lead u-text-center">
+            RÊVEオリジナルのネイルチップ。<br>
+            特別な日のために、日常のおしゃれに。
+          </p>
+
+          <ul class="p-shop__list">
+            <li class="p-shop__item" data-id="1" data-name="Milky Rose Set" data-price="3800" data-img="/assets/images/image_product_01.webp">
+              <div class="p-shop__item-image">
+                <img src="/assets/images/image_product_01.webp" width="400" height="400" alt="Milky Rose Set" loading="lazy" />
+              </div>
+              <div class="p-shop__item-body">
+                <h3 class="p-shop__item-name">Milky Rose Set</h3>
+                <p class="p-shop__item-desc">淡いピンクのグラデーションが上品なネイルチップセット。10枚入り。</p>
+                <p class="p-shop__item-price">¥3,800<span>（税込）</span></p>
+                <button class="c-btn p-shop__item-btn js-add-cart" type="button">カートに追加</button>
+              </div>
+            </li>
+
+            <li class="p-shop__item" data-id="2" data-name="Gold Foil Luxe" data-price="4500" data-img="/assets/images/image_product_02.webp">
+              <div class="p-shop__item-image">
+                <img src="/assets/images/image_product_02.webp" width="400" height="400" alt="Gold Foil Luxe" loading="lazy" />
+              </div>
+              <div class="p-shop__item-body">
+                <h3 class="p-shop__item-name">Gold Foil Luxe</h3>
+                <p class="p-shop__item-desc">ゴールド箔を使った豪華な仕上がり。パーティーや結婚式に最適。10枚入り。</p>
+                <p class="p-shop__item-price">¥4,500<span>（税込）</span></p>
+                <button class="c-btn p-shop__item-btn js-add-cart" type="button">カートに追加</button>
+              </div>
+            </li>
+
+            <li class="p-shop__item" data-id="3" data-name="Sheer French Classic" data-price="3200" data-img="/assets/images/image_product_03.webp">
+              <div class="p-shop__item-image">
+                <img src="/assets/images/image_product_03.webp" width="400" height="400" alt="Sheer French Classic" loading="lazy" />
+              </div>
+              <div class="p-shop__item-body">
+                <h3 class="p-shop__item-name">Sheer French Classic</h3>
+                <p class="p-shop__item-desc">定番のシアーフレンチ。どんなコーデにも合わせやすいシンプルデザイン。10枚入り。</p>
+                <p class="p-shop__item-price">¥3,200<span>（税込）</span></p>
+                <button class="c-btn p-shop__item-btn js-add-cart" type="button">カートに追加</button>
+              </div>
+            </li>
+
+            <li class="p-shop__item" data-id="4" data-name="Bordeaux Velvet" data-price="4,200" data-img="/assets/images/image_product_04.webp">
+              <div class="p-shop__item-image">
+                <img src="/assets/images/image_product_04.webp" width="400" height="400" alt="Bordeaux Velvet" loading="lazy" />
+              </div>
+              <div class="p-shop__item-body">
+                <h3 class="p-shop__item-name">Bordeaux Velvet</h3>
+                <p class="p-shop__item-desc">深みのあるボルドーカラー。秋冬シーズンに人気のマットな質感。10枚入り。</p>
+                <p class="p-shop__item-price">¥4,200<span>（税込）</span></p>
+                <button class="c-btn p-shop__item-btn js-add-cart" type="button">カートに追加</button>
+              </div>
+            </li>
+
+            <li class="p-shop__item" data-id="5" data-name="Cherry Blossom Art" data-price="5,000" data-img="/assets/images/image_product_05.webp">
+              <div class="p-shop__item-image">
+                <img src="/assets/images/image_product_05.webp" width="400" height="400" alt="Cherry Blossom Art" loading="lazy" />
+              </div>
+              <div class="p-shop__item-body">
+                <h3 class="p-shop__item-name">Cherry Blossom Art</h3>
+                <p class="p-shop__item-desc">桜モチーフのハンドペイントアート。春限定デザイン。10枚入り。</p>
+                <p class="p-shop__item-price">¥5,000<span>（税込）</span></p>
+                <button class="c-btn p-shop__item-btn js-add-cart" type="button">カートに追加</button>
+              </div>
+            </li>
+
+            <li class="p-shop__item" data-id="6" data-name="Marble White" data-price="3,500" data-img="/assets/images/image_product_06.webp">
+              <div class="p-shop__item-image">
+                <img src="/assets/images/image_product_06.webp" width="400" height="400" alt="Marble White" loading="lazy" />
+              </div>
+              <div class="p-shop__item-body">
+                <h3 class="p-shop__item-name">Marble White</h3>
+                <p class="p-shop__item-desc">大理石柄をモチーフにした洗練されたデザイン。10枚入り。</p>
+                <p class="p-shop__item-price">¥3,500<span>（税込）</span></p>
+                <button class="c-btn p-shop__item-btn js-add-cart" type="button">カートに追加</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- カートモーダル -->
+    <div class="p-cart-modal js-cart-modal" aria-hidden="true">
+      <div class="p-cart-modal__overlay js-cart-close"></div>
+      <div class="p-cart-modal__content">
+        <button class="p-cart-modal__close js-cart-close" type="button" aria-label="閉じる">×</button>
+        <h2 class="p-cart-modal__title">カート</h2>
+        <ul class="p-cart-modal__list js-cart-list">
+          <!-- JSで生成 -->
+        </ul>
+        <div class="p-cart-modal__footer">
+          <p class="p-cart-modal__total">合計：<strong class="js-cart-modal-total">¥0</strong></p>
+          <a href="/contact/" class="c-btn c-btn--gold">ご注文・お問い合わせへ</a>
+          <p class="p-cart-modal__note">※ 現在はデモです。ご注文はお問い合わせフォームよりお願いします。</p>
+        </div>
+      </div>
+    </div>
+
+    {{> p-footer}}
+    <script src="/assets/js/shop.js" type="module"></script>
+  </body>
+</html>

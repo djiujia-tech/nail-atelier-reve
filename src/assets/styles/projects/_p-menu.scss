@@ -1,0 +1,67 @@
+@use "../global" as *;
+
+// ==============================
+// p-menu（メニュー・料金ページ）
+// ==============================
+
+.p-menu__category {
+  margin-bottom: 60px;
+
+  &:last-of-type {
+    margin-bottom: 40px;
+  }
+}
+
+.p-menu__table {
+  width: 100%;
+  border-collapse: collapse;
+
+  tr {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  tr:first-child {
+    border-top: 1px solid var(--color-border);
+  }
+
+  th,
+  td {
+    padding: 16px 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+    vertical-align: middle;
+
+    @include mq("md") {
+      padding: 18px 16px;
+      font-size: 15px;
+    }
+  }
+
+  th {
+    font-weight: var(--fw-regular);
+    color: var(--color-text);
+  }
+
+  td {
+    min-width: 100px;
+    font-family: var(--en-font-family);
+    font-size: 16px;
+    font-weight: var(--fw-light);
+    color: var(--color-gold);
+    text-align: right;
+    white-space: nowrap;
+  }
+}
+
+.p-menu__note {
+  padding: 24px;
+  margin-bottom: 40px;
+  background-color: var(--color-gray);
+
+  p {
+    font-size: 12px;
+    line-height: 2;
+    color: oklch(from var(--color-text) l c h / 60%);
+  }
+}

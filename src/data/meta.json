@@ -1,0 +1,47 @@
+{
+  "/index.html": {
+    "title": "Nail Atelier RÊVE | ネイルアトリエ レーヴ",
+    "description": "Nail Atelier RÊVE（レーヴ）は、上質なジェルネイルとネイルチップ販売を行うネイルアトリエです。",
+    "ogImage": "/assets/images/ogp.jpg"
+  },
+  "/menu/index.html": {
+    "title": "MENU | Nail Atelier RÊVE",
+    "description": "RÊVEのネイルメニュー・料金一覧です。ジェルネイル・アートネイル・フットネイルなど豊富にご用意しています。",
+    "ogImage": "/assets/images/ogp.jpg"
+  },
+  "/shop/index.html": {
+    "title": "SHOP | Nail Atelier RÊVE",
+    "description": "RÊVEのオンラインショップ。こだわりのネイルチップをお届けします。",
+    "ogImage": "/assets/images/ogp.jpg"
+  },
+  "/gallery/index.html": {
+    "title": "GALLERY | Nail Atelier RÊVE",
+    "description": "RÊVEのネイルデザインギャラリー。季節のトレンドや人気デザインをご覧いただけます。",
+    "ogImage": "/assets/images/ogp.jpg"
+  },
+  "/about/index.html": {
+    "title": "ABOUT | Nail Atelier RÊVE",
+    "description": "Nail Atelier RÊVEについて。コンセプトとネイリスト紹介です。",
+    "ogImage": "/assets/images/ogp.jpg"
+  },
+  "/access/index.html": {
+    "title": "ACCESS | Nail Atelier RÊVE",
+    "description": "Nail Atelier RÊVEへのアクセス情報・営業時間のご案内です。",
+    "ogImage": "/assets/images/ogp.jpg"
+  },
+  "/contact/index.html": {
+    "title": "CONTACT | Nail Atelier RÊVE",
+    "description": "Nail Atelier RÊVEへのご予約・お問い合わせはこちらから。",
+    "ogImage": "/assets/images/ogp.jpg"
+  },
+  "/_components.html": {
+    "title": "パーツ一覧",
+    "description": "パーツ一覧ページです。",
+    "ogImage": "/assets/images/ogp.jpg"
+  },
+  "default": {
+    "title": "Nail Atelier RÊVE",
+    "description": "Nail Atelier RÊVE（レーヴ）",
+    "ogImage": "/assets/images/ogp.jpg"
+  }
+}

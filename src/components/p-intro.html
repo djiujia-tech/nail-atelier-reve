@@ -1,0 +1,70 @@
+<style>
+.p-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  pointer-events: none;
+}
+.p-intro.is-done {
+  display: none;
+}
+.p-intro__panel {
+  flex: 1;
+  background-color: #2c2c2c;
+  transition: transform 0.9s cubic-bezier(0.76, 0, 0.24, 1);
+  transition-delay: 0.8s;
+}
+.p-intro__panel--left { transform: translateX(0); }
+.p-intro.is-open .p-intro__panel--left { transform: translateX(-100%); }
+.p-intro__panel--right { transform: translateX(0); }
+.p-intro.is-open .p-intro__panel--right { transform: translateX(100%); }
+.p-intro__logo {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.4s ease 0.6s;
+}
+.p-intro.is-open .p-intro__logo { opacity: 0; }
+.p-intro__logo-sub {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.35em;
+  color: #c9a96e;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: intro-fade-in 0.6s ease 0.2s forwards;
+}
+.p-intro__logo-main {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: intro-fade-in 0.6s ease 0.35s forwards;
+}
+@keyframes intro-fade-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<div class="p-intro js-intro">
+  <div class="p-intro__panel p-intro__panel--left"></div>
+  <div class="p-intro__logo">
+    <span class="p-intro__logo-sub">Nail Atelier</span>
+    <span class="p-intro__logo-main">RÊVE</span>
+  </div>
+  <div class="p-intro__panel p-intro__panel--right"></div>
+</div>

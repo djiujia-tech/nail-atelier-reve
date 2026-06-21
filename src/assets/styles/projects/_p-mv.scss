@@ -1,0 +1,152 @@
+@use "../global" as *;
+
+// ==============================
+// p-mv
+// ==============================
+
+.p-mv {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+// Splide slider
+.p-mv__slider {
+  width: 100%;
+  height: 100%;
+}
+
+.p-mv__slider .splide__track,
+.p-mv__slider .splide__list,
+.p-mv__slider .splide__slide {
+  height: 100%;
+}
+
+.p-mv__slide-image {
+  width: 100%;
+  height: 100%;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.06);
+    transition: transform 8s ease;
+  }
+}
+
+.splide__slide.is-active .p-mv__slide-image img {
+  transform: scale(1);
+}
+
+// テキスト（下寄せ）
+.p-mv__text {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+
+  // 下から上へのグラデーションオーバーレイ（下部）
+  &::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background:
+      linear-gradient(
+        to top,
+        oklch(from #000 l c h / 70%) 0%,
+        oklch(from #000 l c h / 20%) 50%,
+        transparent 100%
+      ),
+      linear-gradient(
+        to bottom,
+        oklch(from #000 l c h / 45%) 0%,
+        transparent 35%
+      );
+  }
+}
+
+.p-mv__text-inner {
+  position: relative;
+  z-index: 1;
+  padding: 0 clamp(24px, 5vw, 80px) clamp(48px, 8vh, 100px);
+}
+
+.p-mv__catch-en {
+  display: block;
+  margin-bottom: 16px;
+  font-family: var(--en-font-family);
+  font-size: clamp(11px, 1.2vw, 16px);
+  font-weight: var(--fw-light);
+  letter-spacing: 0.35em;
+  color: var(--color-gold-light);
+  text-transform: uppercase;
+}
+
+.p-mv__catch {
+  margin-bottom: 40px;
+  font-family: var(--base-font-family);
+  font-size: clamp(32px, 5.5vw, 72px);
+  font-weight: var(--fw-light);
+  line-height: 1.7;
+  letter-spacing: 0.12em;
+  color: var(--color-white);
+}
+
+.p-mv__btn {
+  // c-btn--gold を継承
+}
+
+// Scroll indicator
+.p-mv__scroll {
+  position: absolute;
+  right: clamp(20px, 4vw, 48px);
+  bottom: clamp(24px, 4vh, 48px);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.p-mv__scroll-label {
+  font-family: var(--en-font-family);
+  font-size: 9px;
+  font-weight: var(--fw-light);
+  letter-spacing: 0.3em;
+  color: var(--color-gold-light);
+  writing-mode: vertical-lr;
+}
+
+.p-mv__scroll-line {
+  position: relative;
+  display: block;
+  width: 1px;
+  height: 48px;
+  overflow: hidden;
+  background-color: oklch(from var(--color-gold-light) l c h / 20%);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-gold-light);
+    animation: mv-scroll-line 1.8s ease-in-out infinite;
+  }
+}
+
+@keyframes mv-scroll-line {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}

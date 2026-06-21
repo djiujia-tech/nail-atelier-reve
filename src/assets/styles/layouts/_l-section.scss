@@ -1,0 +1,23 @@
+@use "../global" as *;
+
+// ==============================
+// l-section
+// ==============================
+
+.l-section {
+  padding-block: 80px;
+
+  @include mq("md") {
+    padding-block: 120px;
+  }
+}
+
+// 薄いベージュ背景
+.l-section--bg {
+  background-color: var(--color-gray);
+}
+
+// ダーク背景
+.l-section--dark {
+  background-color: var(--color-primary);
+}

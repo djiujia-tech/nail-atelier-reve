@@ -1,0 +1,62 @@
+@use "sass:math";
+
+@property --root-font-size {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 16px;
+}
+
+// ローカルフォントのNoto sans JPを優先して使用するためのフォントファイルを読み込む
+@font-face {
+  font-family: "Local Noto Sans JP";
+  src: local("Noto Sans JP");
+}
+
+:root {
+  /* inner */
+  --inner: min(1080px, 100%);
+  --inner-sp: min(500px, 100%);
+  --padding-inner: 20px;
+
+  /* z-index */
+  --z-index-header: 900;
+
+  /* color - RÊVE Nail Atelier */
+  --color-white: #fff;
+  --color-bg: #faf8f6;
+  --color-text: #2c2c2c;
+  --color-black: #000;
+  --color-gray: #f0eded;
+  --color-border: #e8e0dc;
+  --color-gold: #a07838;
+  --color-gold-light: #c9a96e;
+  --color-rose: #d4a5a5;
+  --color-rose-light: #f0e4e4;
+  --color-accent: #c9a96e;
+  --color-primary: #2c2c2c;
+  --color-secondary: #d4a5a5;
+
+  /* font-weight */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* font-family */
+  --base-font-family: "Local Noto Sans JP", "Noto Sans JP", sans-serif;
+  --title-font-family: "Cormorant Garamond", "Georgia", serif;
+  --en-font-family: "Cormorant Garamond", serif;
+
+  // 16pxを基準として、1pxあたりのremを計算
+  --to-rem: calc(tan(atan2(1px, var(--root-font-size))) * 1rem);
+
+  /* transition duration */
+  --duration: 0.3s;
+
+  /* header height */
+  --header-height: 64px;
+
+  @media screen and (width >= 768px) {
+    --header-height: 80px;
+  }
+}
