@@ -6,10 +6,10 @@
   initial-value: 16px;
 }
 
-// ローカルフォントのNoto sans JPを優先して使用するためのフォントファイルを読み込む
+// ローカルフォントのShippori Minchoを優先して使用するためのフォントファイルを読み込む
 @font-face {
-  font-family: "Local Noto Sans JP";
-  src: local("Noto Sans JP");
+  font-family: "Local Shippori Mincho";
+  src: local("Shippori Mincho");
 }
 
 :root {
@@ -43,7 +43,7 @@
   --fw-bold: 700;
 
   /* font-family */
-  --base-font-family: "Local Noto Sans JP", "Noto Sans JP", sans-serif;
+  --base-font-family: "Local Shippori Mincho", "Shippori Mincho", "游明朝", "Yu Mincho", serif;
   --title-font-family: "Cormorant Garamond", "Georgia", serif;
   --en-font-family: "Cormorant Garamond", serif;
 
