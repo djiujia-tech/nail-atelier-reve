@@ -5,3 +5,5 @@ import "./_viewport.js";
 import "./_form-validation.js";
 import "./_scroll-animation.js";
 import "./_header-scroll.js";
+import "./_page-top.js";
+import "./_nav-active.js";

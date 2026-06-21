@@ -253,3 +253,33 @@
     }
   }
 }
+
+// ==============================
+// p-top-cta
+// ==============================
+
+.p-top-cta {
+  padding-block: clamp(80px, 12vw, 140px);
+  background-color: var(--color-primary);
+  text-align: center;
+}
+
+.p-top-cta__label {
+  display: block;
+  margin-bottom: 24px;
+  font-family: var(--en-font-family);
+  font-size: 11px;
+  font-weight: var(--fw-light);
+  letter-spacing: 0.35em;
+  color: var(--color-gold);
+}
+
+.p-top-cta__title {
+  margin: 0 0 48px;
+  font-family: var(--base-font-family);
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: var(--fw-regular);
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+  color: var(--color-white);
+}

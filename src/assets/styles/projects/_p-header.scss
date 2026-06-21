@@ -107,6 +107,25 @@
   }
 }
 
+.p-header__nav-item.is-active > a {
+  color: var(--color-gold);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 14px;
+    right: 14px;
+    height: 1px;
+    background-color: var(--color-gold);
+  }
+}
+
+.p-header__drawer-item.is-active > a {
+  color: var(--color-gold);
+}
+
 .p-header__nav-item--contact > a {
   height: auto;
   padding: 10px 20px;
