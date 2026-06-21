@@ -99,6 +99,12 @@
 
 .p-mv__btn {
   // c-btn--gold を継承
+  @include mq("md") {
+    min-width: 240px;
+    padding: 18px 48px;
+    font-size: 14px;
+    letter-spacing: 0.25em;
+  }
 }
 
 // Scroll indicator
