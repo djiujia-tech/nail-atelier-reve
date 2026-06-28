@@ -4,6 +4,20 @@
 // p-shop（ショップページ）
 // ==============================
 
+.p-shop-demo-notice {
+  background: #f5f0e8;
+  border-top: 1px solid #c9a96e;
+  border-bottom: 1px solid #c9a96e;
+  text-align: center;
+  padding: 10px 16px;
+
+  p {
+    font-size: 0.8rem;
+    color: #8b6f3a;
+    letter-spacing: 0.05em;
+  }
+}
+
 .p-shop__lead {
   max-width: 560px;
   margin-inline: auto;
